@@ -1,0 +1,16 @@
+Ylist = []
+print("enter numbers to add in list")
+def ListMaking():
+  for x in range(10) :
+    Ylist.append(int(input("enter a num:")))
+ListMaking()
+print("your list is " ,Ylist)
+
+newlist = []
+i = 0
+while i < len(Ylist):
+    if Ylist[i] < 5:
+        newlist.append(Ylist[i])
+    i+=1
+
+print("list of element less than 5 are", newlist)
