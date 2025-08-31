@@ -1,0 +1,19 @@
+print("moduler arithmatic")
+num = int(input("enter a number!: "))
+print("if you want to divide then enter divide if you want to do even or odd check enter evenodd")
+inp = input(" here :")
+
+def evenOdd(num):
+    if num % 4 == 0: print("num is divisible by 4")
+    elif num % 2 == 0 : print("num is an even number")
+    else: print("num is an odd number")
+
+def dividing(num, divider):
+    if num % divider == 0: print('number num is divisible by divider")
+    else: print("number is not divisible by divider") 
+
+if inp == "evenodd": evenOdd(num)
+else: 
+    divider = int(input("by which number you want to divide it: "))
+    dividing(num, divider)
+    
