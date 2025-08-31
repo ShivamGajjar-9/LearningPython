@@ -1,14 +1,16 @@
-num= int(input("enter a number to find it's divisors: "))
+import math
+
+num = int(input("Enter a number to find its divisors: "))
 
 def noOfDivisors(num):
-    ct = 0
     divisors = []
-    for x in range (1, (num // 2 + 1)):
-        ct += 1
+    for x in range(1, int(math.sqrt(num)) + 1):
         if num % x == 0:
-            divisors.append(x)
-    divisors.append(num)
-    print(divisors)
-    print(ct)
-noOfDivisors(num)     
-    
+            divisors.append(x)          # small divisor
+            if x != num // x:           # avoid duplicate when x == sqrt(num)
+                divisors.append(num // x)
+    divisors.sort()  # optional, just to keep in ascending order
+    print("Divisors:", divisors)
+    print("Total number of divisors:", len(divisors))
+
+noOfDivisors(num)
